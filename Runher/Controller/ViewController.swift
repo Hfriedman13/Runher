@@ -4,21 +4,28 @@
 //
 //  Created by Hannah Friedman on 12/28/20.
 //
-
 import UIKit
 import CoreLocation
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     let locationManager = CLLocationManager()
+    var run: Run!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureView()
         
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
+    
+    private func configureView() {
+        
+    }
+    
     
     
     
@@ -32,6 +39,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBAction func settingsPressed(_ sender: UIButton) {
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.last {

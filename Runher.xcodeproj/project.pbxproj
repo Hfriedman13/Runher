@@ -13,6 +13,9 @@
 		AF0AE185259A3CBF0047514F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0AE183259A3CBF0047514F /* Main.storyboard */; };
 		AF0AE187259A3CBF0047514F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF0AE186259A3CBF0047514F /* Assets.xcassets */; };
 		AF0AE18A259A3CBF0047514F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF0AE188259A3CBF0047514F /* LaunchScreen.storyboard */; };
+		AF0AE19A259A5FC90047514F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE199259A5FC90047514F /* CoreDataStack.swift */; };
+		AF0AE19F259A62850047514F /* Runher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE19D259A62850047514F /* Runher.xcdatamodeld */; };
+		AF0AE1A3259A72CB0047514F /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		AF0AE186259A3CBF0047514F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF0AE189259A3CBF0047514F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF0AE18B259A3CBF0047514F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF0AE199259A5FC90047514F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		AF0AE19E259A62850047514F /* Runher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runher.xcdatamodel; sourceTree = "<group>"; };
+		AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		AF0AE17C259A3CBF0047514F /* Runher */ = {
 			isa = PBXGroup;
 			children = (
+				AF0AE198259A5FAB0047514F /* CoreData */,
+				AF0AE195259A59630047514F /* Controller */,
+				AF0AE194259A59520047514F /* View */,
+				AF0AE193259A594C0047514F /* Model */,
 				AF0AE17D259A3CBF0047514F /* AppDelegate.swift */,
 				AF0AE17F259A3CBF0047514F /* SceneDelegate.swift */,
-				AF0AE181259A3CBF0047514F /* ViewController.swift */,
-				AF0AE183259A3CBF0047514F /* Main.storyboard */,
 				AF0AE186259A3CBF0047514F /* Assets.xcassets */,
 				AF0AE188259A3CBF0047514F /* LaunchScreen.storyboard */,
 				AF0AE18B259A3CBF0047514F /* Info.plist */,
 			);
 			path = Runher;
+			sourceTree = "<group>";
+		};
+		AF0AE193259A594C0047514F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF0AE194259A59520047514F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AE183259A3CBF0047514F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AF0AE195259A59630047514F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AE181259A3CBF0047514F /* ViewController.swift */,
+				AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AF0AE198259A5FAB0047514F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AE19D259A62850047514F /* Runher.xcdatamodeld */,
+				AF0AE199259A5FC90047514F /* CoreDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +179,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF0AE182259A3CBF0047514F /* ViewController.swift in Sources */,
+				AF0AE1A3259A72CB0047514F /* NewRunViewController.swift in Sources */,
 				AF0AE17E259A3CBF0047514F /* AppDelegate.swift in Sources */,
 				AF0AE180259A3CBF0047514F /* SceneDelegate.swift in Sources */,
+				AF0AE19A259A5FC90047514F /* CoreDataStack.swift in Sources */,
+				AF0AE19F259A62850047514F /* Runher.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +385,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AF0AE19D259A62850047514F /* Runher.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AF0AE19E259A62850047514F /* Runher.xcdatamodel */,
+			);
+			currentVersion = AF0AE19E259A62850047514F /* Runher.xcdatamodel */;
+			path = Runher.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AF0AE172259A3CBF0047514F /* Project object */;
 }
