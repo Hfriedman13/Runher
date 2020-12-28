@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Runher" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="trackBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Mro-3m-ffQ">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUNHER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItX-0l-Jjn">
-                                <rect key="frame" x="64" y="74" width="286" height="77"/>
+                                <rect key="frame" x="64" y="74" width="262" height="77"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="P7k-6j-QXV"/>
                                 </constraints>
@@ -30,17 +30,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEa-6C-NFf">
-                                <rect key="frame" x="7" y="785" width="77" height="44"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <rect key="frame" x="16" y="733.66666666666663" width="77" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="STATS">
-                                    <color key="titleColor" red="1" green="0.6278657634" blue="0.4626441999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.0" green="0.45561242099999999" blue="0.99922794100000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="statsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jdp-iV-hJ4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wub-1U-NLm">
-                                <rect key="frame" x="173" y="785" width="77" height="44"/>
+                                <rect key="frame" x="173" y="733" width="77" height="44"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" red="1" green="0.6278657634" blue="0.4626441999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -50,7 +50,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEM-eR-xg7">
-                                <rect key="frame" x="345" y="785" width="77" height="44"/>
+                                <rect key="frame" x="329" y="733" width="77" height="44"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="0.6278657634" blue="0.4626441999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="1" green="0.6278657634" blue="0.4626441999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -77,11 +77,11 @@
                             <constraint firstItem="wub-1U-NLm" firstAttribute="width" secondItem="hEa-6C-NFf" secondAttribute="width" id="RfG-L0-HEv"/>
                             <constraint firstItem="wub-1U-NLm" firstAttribute="height" secondItem="hEa-6C-NFf" secondAttribute="height" id="blt-p6-RmP"/>
                             <constraint firstItem="ItX-0l-Jjn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hcL-sa-x0x"/>
-                            <constraint firstItem="hEa-6C-NFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="ksB-iW-FQ3"/>
+                            <constraint firstItem="hEa-6C-NFf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ksB-iW-FQ3"/>
                             <constraint firstItem="wub-1U-NLm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="173" id="lKl-mM-T5A"/>
                             <constraint firstAttribute="bottom" secondItem="Mro-3m-ffQ" secondAttribute="bottom" id="o5c-ov-i2Q"/>
-                            <constraint firstItem="JEM-eR-xg7" firstAttribute="leading" secondItem="wub-1U-NLm" secondAttribute="trailing" constant="95" id="rNb-dn-lNE"/>
-                            <constraint firstItem="wub-1U-NLm" firstAttribute="baseline" secondItem="hEa-6C-NFf" secondAttribute="baseline" id="sf0-B1-cry"/>
+                            <constraint firstItem="JEM-eR-xg7" firstAttribute="leading" secondItem="wub-1U-NLm" secondAttribute="trailing" constant="79" id="rNb-dn-lNE"/>
+                            <constraint firstItem="wub-1U-NLm" firstAttribute="baseline" secondItem="hEa-6C-NFf" secondAttribute="baseline" constant="1.3333333333333712" id="sf0-B1-cry"/>
                             <constraint firstItem="ItX-0l-Jjn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="yTc-kY-U0j"/>
                         </constraints>
                     </view>
