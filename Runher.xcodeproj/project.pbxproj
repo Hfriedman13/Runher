@@ -16,6 +16,8 @@
 		AF0AE19A259A5FC90047514F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE199259A5FC90047514F /* CoreDataStack.swift */; };
 		AF0AE19F259A62850047514F /* Runher.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE19D259A62850047514F /* Runher.xcdatamodeld */; };
 		AF0AE1A3259A72CB0047514F /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */; };
+		AF0AE1A6259A88720047514F /* StoryBoardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE1A5259A88720047514F /* StoryBoardSupport.swift */; };
+		AF0AE1AB259B82250047514F /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE1AA259B82250047514F /* RunDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AF0AE199259A5FC90047514F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		AF0AE19E259A62850047514F /* Runher.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Runher.xcdatamodel; sourceTree = "<group>"; };
 		AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
+		AF0AE1A5259A88720047514F /* StoryBoardSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardSupport.swift; sourceTree = "<group>"; };
+		AF0AE1AA259B82250047514F /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 		AF0AE17C259A3CBF0047514F /* Runher */ = {
 			isa = PBXGroup;
 			children = (
+				AF0AE1A8259A887F0047514F /* Support files */,
 				AF0AE198259A5FAB0047514F /* CoreData */,
 				AF0AE195259A59630047514F /* Controller */,
 				AF0AE194259A59520047514F /* View */,
@@ -70,7 +75,6 @@
 				AF0AE17F259A3CBF0047514F /* SceneDelegate.swift */,
 				AF0AE186259A3CBF0047514F /* Assets.xcassets */,
 				AF0AE188259A3CBF0047514F /* LaunchScreen.storyboard */,
-				AF0AE18B259A3CBF0047514F /* Info.plist */,
 			);
 			path = Runher;
 			sourceTree = "<group>";
@@ -95,6 +99,7 @@
 			children = (
 				AF0AE181259A3CBF0047514F /* ViewController.swift */,
 				AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */,
+				AF0AE1AA259B82250047514F /* RunDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -106,6 +111,15 @@
 				AF0AE199259A5FC90047514F /* CoreDataStack.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		AF0AE1A8259A887F0047514F /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AE18B259A3CBF0047514F /* Info.plist */,
+				AF0AE1A5259A88720047514F /* StoryBoardSupport.swift */,
+			);
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,9 +195,11 @@
 				AF0AE182259A3CBF0047514F /* ViewController.swift in Sources */,
 				AF0AE1A3259A72CB0047514F /* NewRunViewController.swift in Sources */,
 				AF0AE17E259A3CBF0047514F /* AppDelegate.swift in Sources */,
+				AF0AE1AB259B82250047514F /* RunDetailsViewController.swift in Sources */,
 				AF0AE180259A3CBF0047514F /* SceneDelegate.swift in Sources */,
 				AF0AE19A259A5FC90047514F /* CoreDataStack.swift in Sources */,
 				AF0AE19F259A62850047514F /* Runher.xcdatamodeld in Sources */,
+				AF0AE1A6259A88720047514F /* StoryBoardSupport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
