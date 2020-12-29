@@ -24,12 +24,13 @@ class NewRunViewController: UIViewController {
     
     private func startRun() {
       dataStackView.isHidden = true
-      //startButton.setTitle("STOP", for: .normal)
+      //add timer in that goes while running?
     }
       
     private func stopRun() {
       dataStackView.isHidden = false
-      
+//alerts to end run / save run
+//currently broken -- endless loop, if save then goes to details screen
         let alertController = UIAlertController(title: "End run?",
                                                 message: "Do you wish to end your run?",
                                                 preferredStyle: .actionSheet)
@@ -42,11 +43,12 @@ class NewRunViewController: UIViewController {
           self.stopRun()
           _ = self.navigationController?.popToRootViewController(animated: true)
         })
-            
-        present(alertController, animated: true)
-        
+        alertController.pruneNegativeWidthConstraints()
+        //alertController.view.addSubview(UIView())
+        present(alertController, animated: true, completion: nil)
     }
     
+//changing start to stop
     @IBAction func startPressed(_ sender: UIButton) {
         if sender.currentTitle == "START" {
             startRun()
@@ -74,4 +76,13 @@ extension NewRunViewController: SegueHandlerType {
       destination.run = run
     }
   }
+}
+extension UIAlertController {
+    func pruneNegativeWidthConstraints() {
+        for subView in self.view.subviews {
+            for constraint in subView.constraints where constraint.debugDescription.contains("width == - 16") {
+                subView.removeConstraint(constraint)
+            }
+        }
+    }
 }
