@@ -19,21 +19,16 @@ class NewRunViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //dataStackView.isHidden = true
+        dataStackView.isHidden = true
     }
     
     private func startRun() {
-      dataStackView.isHidden = false
+      dataStackView.isHidden = true
       //startButton.setTitle("STOP", for: .normal)
-      startButton.isHidden = false
-      //stopButton.isHidden = false
     }
       
     private func stopRun() {
-     // launchPromptStackView.isHidden = false
-      dataStackView.isHidden = true
-      startButton.isHidden = false
+      dataStackView.isHidden = false
       
         let alertController = UIAlertController(title: "End run?",
                                                 message: "Do you wish to end your run?",
@@ -60,6 +55,7 @@ class NewRunViewController: UIViewController {
         }
         else {
             stopRun()
+            sender.setTitle("START", for: .normal)
         }
         
     }
@@ -75,7 +71,7 @@ extension NewRunViewController: SegueHandlerType {
     switch segueIdentifier(for: segue) {
     case .details:
       let destination = segue.destination as! RunDetailsViewController
-      //destination.run = run
+      destination.run = run
     }
   }
 }
