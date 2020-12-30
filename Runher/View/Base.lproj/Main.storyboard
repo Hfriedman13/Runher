@@ -149,6 +149,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIz-bg-g13">
+                                <rect key="frame" x="10" y="9" width="60" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="cYc-IU-Dwr" eventType="touchUpInside" id="Hby-hp-WP4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EOU-ew-GKw"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -166,6 +174,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="BqA-7q-baJ"/>
                     <connections>
+                        <outlet property="backButton" destination="zIz-bg-g13" id="o1U-Xe-PAw"/>
                         <outlet property="dataStackView" destination="ANn-8e-ecZ" id="h6G-nA-gAX"/>
                         <segue destination="rE2-aN-rXu" kind="show" identifier="RunDetailsViewController" id="cxe-JI-ZAR"/>
                     </connections>
@@ -224,14 +233,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCw-SX-lgR">
+                                <rect key="frame" x="13" y="6" width="48" height="42"/>
+                                <state key="normal" image="arrowshape.turn.up.left.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="rE2-aN-rXu" eventType="touchUpInside" id="9zL-1x-YUA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Yug-Oe-KAE"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                         <constraints>
                             <constraint firstItem="P52-xZ-qIE" firstAttribute="leading" secondItem="kb4-mL-LqE" secondAttribute="leading" id="4m4-e7-fuq"/>
+                            <constraint firstItem="Yug-Oe-KAE" firstAttribute="trailing" secondItem="MCw-SX-lgR" secondAttribute="trailing" constant="329" id="8mq-CX-PCP"/>
                             <constraint firstItem="MB7-rx-BVC" firstAttribute="leading" secondItem="Yug-Oe-KAE" secondAttribute="leading" constant="125.99999999999999" id="MfN-Gz-mZu"/>
                             <constraint firstItem="kb4-mL-LqE" firstAttribute="top" secondItem="MB7-rx-BVC" secondAttribute="bottom" constant="33.333333333333258" id="V2Y-kC-IEg"/>
                             <constraint firstItem="MB7-rx-BVC" firstAttribute="top" secondItem="P52-xZ-qIE" secondAttribute="bottom" constant="8" symbolic="YES" id="d9F-mG-dCb"/>
+                            <constraint firstItem="MCw-SX-lgR" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P52-xZ-qIE" secondAttribute="leading" id="hbi-ot-q7F"/>
+                            <constraint firstItem="MCw-SX-lgR" firstAttribute="top" secondItem="Yug-Oe-KAE" secondAttribute="top" constant="6" id="iCw-yo-wdi"/>
                             <constraint firstItem="P52-xZ-qIE" firstAttribute="top" secondItem="Yug-Oe-KAE" secondAttribute="top" constant="56" id="o99-pu-Emk"/>
                             <constraint firstItem="Yug-Oe-KAE" firstAttribute="bottom" secondItem="kb4-mL-LqE" secondAttribute="bottom" constant="101.33333333333337" id="rwH-sh-nve"/>
                             <constraint firstAttribute="trailing" secondItem="P52-xZ-qIE" secondAttribute="trailing" id="s7T-xi-RIF"/>
@@ -240,6 +259,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="6dH-5D-Gl4"/>
                     <connections>
+                        <outlet property="backButton" destination="MCw-SX-lgR" id="BON-iA-6VW"/>
                         <outlet property="dateLabel" destination="IFQ-x5-c6b" id="ihP-kd-oJB"/>
                         <outlet property="distanceLabel" destination="rht-Mu-60I" id="LmQ-KW-VnX"/>
                         <outlet property="mapView" destination="P52-xZ-qIE" id="T81-8T-5Ys"/>
@@ -253,6 +273,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="girlRunning" width="800" height="800"/>
         <image name="trackBackground" width="768" height="768"/>

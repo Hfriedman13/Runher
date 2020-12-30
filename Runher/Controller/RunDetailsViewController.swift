@@ -15,6 +15,7 @@ class RunDetailsViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var paceLabel: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     
     var run: Run!
     
@@ -26,4 +27,9 @@ class RunDetailsViewController: UIViewController {
     private func configureView() {
         
     }
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
