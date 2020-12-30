@@ -19,6 +19,8 @@
 		AF0AE1A6259A88720047514F /* StoryBoardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE1A5259A88720047514F /* StoryBoardSupport.swift */; };
 		AF0AE1AB259B82250047514F /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0AE1AA259B82250047514F /* RunDetailsViewController.swift */; };
 		AFF37C7E259CDAE900FA7375 /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF37C7D259CDAE900FA7375 /* UnitExtensions.swift */; };
+		AFF37C83259CE04100FA7375 /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF37C82259CE04100FA7375 /* FormatDisplay.swift */; };
+		AFF37C87259CE0D900FA7375 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF37C86259CE0D900FA7375 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		AF0AE1A5259A88720047514F /* StoryBoardSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoardSupport.swift; sourceTree = "<group>"; };
 		AF0AE1AA259B82250047514F /* RunDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
 		AFF37C7D259CDAE900FA7375 /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
+		AFF37C82259CE04100FA7375 /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		AFF37C86259CE0D900FA7375 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				AF0AE17C259A3CBF0047514F /* Runher */,
+				AFF37C81259CDFF000FA7375 /* MISC */,
 				AF0AE17B259A3CBF0047514F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,10 +78,6 @@
 				AF0AE195259A59630047514F /* Controller */,
 				AF0AE194259A59520047514F /* View */,
 				AF0AE193259A594C0047514F /* Model */,
-				AF0AE17D259A3CBF0047514F /* AppDelegate.swift */,
-				AF0AE17F259A3CBF0047514F /* SceneDelegate.swift */,
-				AF0AE186259A3CBF0047514F /* Assets.xcassets */,
-				AF0AE188259A3CBF0047514F /* LaunchScreen.storyboard */,
 			);
 			path = Runher;
 			sourceTree = "<group>";
@@ -84,6 +85,9 @@
 		AF0AE193259A594C0047514F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AFF37C7D259CDAE900FA7375 /* UnitExtensions.swift */,
+				AFF37C82259CE04100FA7375 /* FormatDisplay.swift */,
+				AFF37C86259CE0D900FA7375 /* LocationManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,7 +106,6 @@
 				AF0AE181259A3CBF0047514F /* ViewController.swift */,
 				AF0AE1A2259A72CB0047514F /* NewRunViewController.swift */,
 				AF0AE1AA259B82250047514F /* RunDetailsViewController.swift */,
-				AFF37C7D259CDAE900FA7375 /* UnitExtensions.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,8 +124,19 @@
 			children = (
 				AF0AE18B259A3CBF0047514F /* Info.plist */,
 				AF0AE1A5259A88720047514F /* StoryBoardSupport.swift */,
+				AF0AE186259A3CBF0047514F /* Assets.xcassets */,
+				AF0AE188259A3CBF0047514F /* LaunchScreen.storyboard */,
 			);
 			path = "Support files";
+			sourceTree = "<group>";
+		};
+		AFF37C81259CDFF000FA7375 /* MISC */ = {
+			isa = PBXGroup;
+			children = (
+				AF0AE17D259A3CBF0047514F /* AppDelegate.swift */,
+				AF0AE17F259A3CBF0047514F /* SceneDelegate.swift */,
+			);
+			path = MISC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +212,8 @@
 				AF0AE182259A3CBF0047514F /* ViewController.swift in Sources */,
 				AF0AE1A3259A72CB0047514F /* NewRunViewController.swift in Sources */,
 				AF0AE17E259A3CBF0047514F /* AppDelegate.swift in Sources */,
+				AFF37C87259CE0D900FA7375 /* LocationManager.swift in Sources */,
+				AFF37C83259CE04100FA7375 /* FormatDisplay.swift in Sources */,
 				AF0AE1AB259B82250047514F /* RunDetailsViewController.swift in Sources */,
 				AF0AE180259A3CBF0047514F /* SceneDelegate.swift in Sources */,
 				AF0AE19A259A5FC90047514F /* CoreDataStack.swift in Sources */,

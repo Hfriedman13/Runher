@@ -176,6 +176,10 @@
                     <connections>
                         <outlet property="backButton" destination="zIz-bg-g13" id="o1U-Xe-PAw"/>
                         <outlet property="dataStackView" destination="ANn-8e-ecZ" id="h6G-nA-gAX"/>
+                        <outlet property="distanceLabel" destination="R1O-I4-30E" id="usd-XJ-Re7"/>
+                        <outlet property="paceLabel" destination="RR1-Yh-SRs" id="8s1-eL-FLX"/>
+                        <outlet property="startButton" destination="rzY-pw-6Ry" id="tSd-l7-9a2"/>
+                        <outlet property="timeLabel" destination="cVg-3U-rrU" id="acU-mQ-CK4"/>
                         <segue destination="rE2-aN-rXu" kind="show" identifier="RunDetailsViewController" id="cxe-JI-ZAR"/>
                     </connections>
                 </viewController>
