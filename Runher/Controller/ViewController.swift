@@ -6,13 +6,14 @@
 //
 import UIKit
 
-class ViewController: UIViewController{
+class ViewController: UIViewController {
     
     @IBOutlet weak var statsButton: UIButton!
     @IBOutlet weak var newRunButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
     
-    public var run: Run!
+    public var run: Run?
+    
     
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -33,8 +34,9 @@ extension ViewController: SegueHandlerType {
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     switch segueIdentifier(for: segue) {
     case .newRun:
-        _ = segue.destination as! NewRunViewController
-      //destination.run = run
+        let destination: NewRunViewController = segue.destination as! NewRunViewController
+        destination.run = run
+        
     }
   }
 }

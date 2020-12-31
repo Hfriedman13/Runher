@@ -15,8 +15,10 @@ class NewRunViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
     
-    private var run: Run?
+    public var run: Run?
+    
     private let locationManager = LocationManager.shared
     private var seconds = 0
     private var timer: Timer?
@@ -49,7 +51,7 @@ class NewRunViewController: UIViewController {
         startLocationUpdates()
         
     }
-    //MARK: - Stop function ALERT NOT WORKING CORRECTLY
+    
     private func stopRun() {
         dataStackView.isHidden = false
         let alertController = UIAlertController(title: "End run?",
@@ -59,26 +61,28 @@ class NewRunViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         alertController.addAction(UIAlertAction(title: "Save", style: .default) {
             _ in
-            self.stopRun()
-            self.performSegue(withIdentifier: "RunDetailsViewController", sender: nil)
+            //self.stopRun()
+            self.saveRun()
+            self.performSegue(withIdentifier: "RunDetailsViewController", sender: self)
         })
         alertController.addAction(UIAlertAction(title: "Discard", style: .destructive) {
-            _ in
-            self.stopRun()
-            _ = self.navigationController?.popToRootViewController(animated: true)
-            
+            navigationController in
+            //self.stopRun()
+            self.navigationController?.popToRootViewController(animated: true)
         })
         
         alertController.pruneNegativeWidthConstraints()
         present(alertController, animated: true, completion: nil)
         
-        //MARK: - Shows details page after 5 seconds regardless of whats pressed
+//MARK: - Shows details page after 5 seconds regardless of whats pressed
         
-                DispatchQueue.main.asyncAfter(deadline: .now() + 5){
-                    alertController.dismiss(animated: true, completion: {
-                                self.performSegue(withIdentifier: "RunDetailsViewController", sender: self)
-                    })
-        }
+//                DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+//                    alertController.dismiss(animated: true, completion: {
+//                                self.performSegue(withIdentifier: "RunDetailsViewController", sender: self)
+//                    })
+//        }
+        
+        locationManager.stopUpdatingLocation()
         
     }
     
@@ -95,11 +99,7 @@ class NewRunViewController: UIViewController {
         }
         
     }
-    
-    @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+//MARK: - updating time and time labels
     func eachSecond() {
         seconds += 1
         updateDisplay()
@@ -115,8 +115,9 @@ class NewRunViewController: UIViewController {
         distanceLabel.text = "Distance:  \(formattedDistance)"
         timeLabel.text = "Time:  \(formattedTime)"
         paceLabel.text = "Pace:  \(formattedPace)"
+        timerLabel.text = "TIME: \(formattedTime)"
     }
-    
+//MARK: - location updates and saving the location of the run
     private func startLocationUpdates() {
         locationManager.delegate = self
         locationManager.activityType = .fitness
@@ -124,10 +125,29 @@ class NewRunViewController: UIViewController {
         locationManager.startUpdatingLocation()
     }
     
+    private func saveRun() {
+      let newRun = Run(context: CoreDataStack.context)
+      newRun.distance = distance.value
+      newRun.duration = Int16(seconds)
+      newRun.timestamp = Date()
+      
+      for location in locationList {
+        let locationObject = Location(context: CoreDataStack.context)
+        locationObject.timestamp = location.timestamp
+        locationObject.latitude = location.coordinate.latitude
+        locationObject.longitude = location.coordinate.longitude
+        newRun.addToLocations(locationObject)
+      }
+      
+      CoreDataStack.saveContext()
+      
+      run = newRun
+    }
+
     
     
 }
-
+//MARK: - preparing new segue
 extension NewRunViewController: SegueHandlerType {
     enum SegueIdentifier: String {
         case details = "RunDetailsViewController"
@@ -141,15 +161,7 @@ extension NewRunViewController: SegueHandlerType {
         }
     }
 }
-extension UIAlertController {
-    func pruneNegativeWidthConstraints() {
-        for subView in self.view.subviews {
-            for constraint in subView.constraints where constraint.debugDescription.contains("width == - 16") {
-                subView.removeConstraint(constraint)
-            }
-        }
-    }
-}
+//MARK: - Location manager delegate
 extension NewRunViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -163,6 +175,16 @@ extension NewRunViewController: CLLocationManagerDelegate {
             }
             
             locationList.append(newLocation)
+        }
+    }
+}
+//MARK: - bug fix for alert controller
+extension UIAlertController {
+    func pruneNegativeWidthConstraints() {
+        for subView in self.view.subviews {
+            for constraint in subView.constraints where constraint.debugDescription.contains("width == - 16") {
+                subView.removeConstraint(constraint)
+            }
         }
     }
 }

@@ -8,9 +8,9 @@
 import CoreData
 
 class CoreDataStack {
-  
+//MARK: - Core data stack
   static let persistentContainer: NSPersistentContainer = {
-    let container = NSPersistentContainer(name: "MoonRunner")
+    let container = NSPersistentContainer(name: "Runher")
     container.loadPersistentStores { (_, error) in
       if let error = error as NSError? {
         fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -21,6 +21,7 @@ class CoreDataStack {
   
   static var context: NSManagedObjectContext { return persistentContainer.viewContext }
   
+//MARK: - Core data saving support
   class func saveContext () {
     let context = persistentContainer.viewContext
     
